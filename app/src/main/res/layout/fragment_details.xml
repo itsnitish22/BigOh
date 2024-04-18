@@ -1,0 +1,54 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="imageUrl"
+            type="String" />
+
+        <variable
+            name="authorName"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="@dimen/spacing_very_small_10dp"
+        tools:context=".main.details.DetailsFragment">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardContainer"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            app:cardCornerRadius="@dimen/spacing_very_small_8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/courseImageContainer"
+                urlToImage="@{imageUrl}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                tools:src="@drawable/ic_launcher_background" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sanspro_semibold"
+            android:maxLines="1"
+            android:paddingVertical="@dimen/spacing_very_small_10dp"
+            android:text="@{authorName}"
+            android:textSize="@dimen/spacing_small_16dp"
+            app:layout_constraintEnd_toEndOf="@id/cardContainer"
+            app:layout_constraintStart_toStartOf="@id/cardContainer"
+            app:layout_constraintTop_toBottomOf="@id/cardContainer"
+            tools:text="Test Test Test Test Test" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
