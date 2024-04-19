@@ -5,5 +5,5 @@
 3. Custom Callbacks for efficent pagination
 4. Navgraphs for navigation
 5. MVVM Architecture
-6. Extension Funcations
+6. Extension Functions
 7. Clean Code
